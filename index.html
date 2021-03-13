@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width = device-width, initial-scale = 1.0">
+		<meta http-equiv="X-UA-Compatible" content = "ie=edge">
+		<title>UpwareSoft</title>
+		<!-- CSS -->
+		<link href="style.css" type="text/css" rel="stylesheet">
+
+		<!-- FUENTES -->
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+
+		<!-- JQUERY -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+		<!-- SLICK SLIDER -->
+		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+		<script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+		<script>
+
+			$(document).ready(function(){
+
+				$("#ico-menu").click(function(){
+
+					var visible = $("#menu-header").data("view");
+
+					if( visible == false ){
+						//$("#menu-header").css("right", 0);
+						$("#menu-header").css("top", 30 + "vh");
+						$("#menu-header").data("view", true);
+					}
+
+					if( visible == true ){
+						//$("#menu-header").css("right", 100 + "vh");
+						$("#menu-header").css("top",-400 + "px");
+						$("#menu-header").data("view", false);
+					}	
+				});
+
+				$('#wrapcomments').slick({
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					autoplay:true,
+					autoplaySpeed: 2000,
+					dots: true,
+
+					responsive: [
+						{
+							breakpoint: 600,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1,
+							}
+						}
+					]
+
+				});
+
+			});
+
+			
+			$(window).resize(function(){
+
+				var ventana = $(window).width();
+
+				if( ventana > 600 ){
+					$("#menu-header").css("right", 0);
+					$("#menu-header").data("view", false);
+				}
+				if( ventana <= 600 ){
+					$("#menu-header").css("right", 100 + "vh");
+					$("#menu-header").data("view", false);
+				}
+
+
+			});
+
+			$(window).resize(function(){
+
+				var ventana = $(window).width();
+
+				if( ventana > 850 ){
+					$("#menu-header").css("right", 0);
+					$("#menu-header").data("view", false);
+				}
+				if( ventana <= 850 ){
+					$("#menu-header").css("right", 100 + "vh");
+					$("#menu-header").data("view", false);
+				}
+
+
+			});
+
+
+
+
+		</script>
+
+
+
+
+	</head>
+	<body>
+		<img src="menu.svg" id="ico-menu" alt="Icono del Menú">
+
+		<!-- INICIO HEADER -->
+		<header id="header-index">
+
+			<!-- LOGOHEADER -->
+			<h1 id="LogoHeader">
+				<img src="Images/LogoHeader.png" alt="Imagen Fondo">
+			</h1>
+			<!-- FIN LOGOHEADER -->
+
+
+			<!-- MENUHEADER -->
+			<nav class="menu-header"  data view="false">
+				<a href="" class="btPrincipal">NUESTRA EMPRESA</a>
+				<a href="" class="btPrincipal">SAC</a>
+				<a href="" class="btPrincipal">DESARROLLOS</a>
+				<a href="" class="btPrincipal">NUESTRA RAZÓN DE SER</a>
+				<a href="" class="btPrincipal">CONTÁCTANOS</a>
+			</nav>
+			<!-- FIN MENUHEADER -->
+
+
+			<!-- BACKHEADER -->
+			<video autoplay muted loop id="video-header">
+				<source src="MP4/videoCorp.mp4" type="video/mp4">
+			</video> 
+			<!-- FIN BACKHEADER -->
+
+
+		</header>
+		<!-- FIN HEADER -->
+
+		<!-- WRAPDESCRIP -->
+		<div id="wrap-negocios">
+			<article class="negocio">
+				<h1>JARDINES INFANTILES</h1>
+				<img src="Images/Jardines.jpg" alt="Jardines Infantiles">
+			</article>
+
+			<article class="negocio">
+				<h1>COLEGIOS</h1>
+				<img src="Images/Colegios.jpg" alt="Colegios">                
+			</article>
+
+			<article class="negocio">
+				<h1>UNIVERSIDADES</h1>
+				<img src="Images/Universidades.jpg" alt="Universidades">            
+			</article>
+
+			<article class="negocio">
+				<h1>PROGRAMAS DEPORTIVOS</h1>
+				<img src="Images/Deporte.png" alt="Programas Deportivos">
+			</article>
+
+			<article class="negocio">
+				<h1>CAJAS DE COMPENSACIÓN</h1>
+				<img src="Images/Cajas.jpg" alt="Cajas de Compensación">
+			</article>
+		</div>
+		<!-- FIN WRAPDESCRIP -->
+
+
+		<!-- WRAPDESCRIPCIÓN -->
+		<section id="wrapDescripcion">
+			<h2 class="tituloPrincipal">
+				<img src="Images/LogoWrap.png" alt="Logo UpwareSoft">
+			</h2>
+			<p>UpwareSoft, es una empresa lider en desarrollo de sistemas de información corporativos, creada hace más de 17 años con productos que unifican modular y confiablemente la información, permitiendo centralizar y administrar los datos, para  lograr disminuir  los riesgos y el tiempo de trabajo. </p>
+			<a href="" class="botonCall">AMPLIAR</a>
+		</section>
+		<!-- FIN WRAPDESCRIPCIÓN -->
+
+
+		<!-- ENTRADAS -->
+		<div id="wrapEntradas">
+
+			<article class="entrada">
+				<div class="imgEntrada"><img src="Images/Campus.jpg" alt="entrada1"></div>
+				<div id="enlaceEntrada1">
+						<img src="Images/CampusPack.png">
+					</div>
+				
+			</article>
+
+			<article class="entrada">
+				<div class="imgEntrada"><img src="Images/Sport.jpg" alt="entrada2"></div>
+				<div id="enlaceEntrada2">
+						<img src="Images/SportArchitect.png">
+					</div>
+				
+			</article>
+
+			<article class="entrada">
+				<div class="imgEntrada"><img src="Images/School.jpg" alt="entrada3"></div>
+				<div id="enlaceEntrada3">
+						<img src="Images/SchoolPack.png">
+					</div>
+				
+			</article>
+
+			<article class="entrada">
+				<div class="imgEntrada"><img src="Images/Factory.jpg" alt="entrada4"></div>
+				<div id="enlaceEntrada4">
+						<img src="Images/LearningFac.png">
+					</div>
+				
+			</article>
+		</div>	
+		<!-- FIN ENTRADAS -->
+
+		<!-- COMENTARIOS -->
+		<div id="wrapcomments">
+
+			<div class="comentarios">
+				<figure>
+					<img src="Images/testi1.jpg" alt="Testimonio Imagen1">
+				</figure>
+				<div>
+					<h2>Colegio Parroquial San Buenaventura</h2>
+					<h3>Isabela Martínez Munoz</h3>
+					<h4>Directora Docentes</h4>
+					<p>En el Colegio Paroquial San Buenaventura, desde el año 2009, encontramos en UpwareSoft y su producto School-Pack una solución integral para el Manejo de la Gestion Academica, y los servicios de apoyo y atención al cliente. La claridad de cada modulo, y la versatilidad para trabajar en red cada uno de ellos. </p>
+				</div>
+			</div>
+
+			<div class="comentarios">
+				<figure>
+					<img src="Images/testi2.png" alt="Testimonio Imagen2">
+				</figure>
+				<div>
+					<h2>Colegio La Presentación en Santa Marta</h2>
+					<h3>Estefani Gonzalez Herrera</h3>
+					<h4>Jefe de Sistemas</h4>
+					<p>Como jefe de Sistemas del Colegio La Presentacion de Santa Marta, quiero manifestar el alto grado de satisfaccion que hay con el sistema School Pack  ya que su funcionalidad permite coordinar, programar y evaluar  nuestro proceso educativo.</p>
+				</div>
+			</div>
+
+			<div class="comentarios">
+				<figure>
+					<img src="Images/testi3.jpg" alt="Testimonio Imagen1">
+				</figure>
+				<div>
+					<h2>Colegio Parroquial San Buenaventura</h2>
+					<h3>Isabela Martínez Munoz</h3>
+					<h4>Directora Docentes</h4>
+					<p>En el Colegio Paroquial San Buenaventura, desde el año 2009, encontramos en UpwareSoft y su producto School-Pack una solución integral para el Manejo de la Gestion Academica, y los servicios de apoyo y atención al cliente. La claridad de cada modulo, y la versatilidad para trabajar en red cada uno de ellos. </p>
+				</div>
+			</div>
+
+			<div class="comentarios">
+				<figure>
+					<img src="Images/testi4.jpg" alt="Testimonio Imagen2">
+				</figure>
+				<div>
+					<h2>Colegio La Presentación en Santa Marta</h2>
+					<h3>Estefani Gonzalez Herrera</h3>
+					<h4>Jefe de Sistemas</h4>
+					<p>Como jefe de Sistemas del Colegio La Presentacion de Santa Marta, quiero manifestar el alto grado de satisfaccion que hay con el sistema School Pack  ya que su funcionalidad permite coordinar, programar y evaluar  nuestro proceso educativo.</p>
+				</div>
+			</div>
+
+		</div>
+		<!-- FIN COMENTARIOS -->
+
+
+		<!-- PAGOS -->
+		<div id="wrapSacPagos">
+			<div class="boton-banner">
+				<h2>Ingresa nuestro S.A.C</h2>
+				<div id="title-sac">
+					<h3>Sistema Atencion al cliente</h3>
+				</div>
+				<a href="" class="botonSacPagos">Ingresa al S.A.C</a>
+				<div class="back-banner">
+					<img src="Images/sac.jpg" alt="Imagen fondo Sac">
+				</div>
+			</div>
+
+			<div class="boton-banner">
+				<h2>Botón de Pagos PSE</h2>
+				<div id="imagenPse">
+					<img src="Images/BotonPse.png" alt="imagen PSE">
+				</div>
+				<a href="" class="botonSacPagos">Ingresa Haciendo Click Aquí</a>
+				<div class="back-banner">
+					<img src="Images/pse.jpg" alt="Imagen fondo Pagos">
+				</div>
+			</div>
+
+		</div>
+		<!-- FIN PAGOS -->
+
+		<!-- WRAPUBICACION -->
+		<div id="wrapUbicacion">
+			<div id="mapa">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3343.0468169345177!2d-74.05637379722361!3d4.
+							 842783485185274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f87bef2c27467%3A0x58f640ab9a573441!2sVia
+							 %20la%20Balsa%2C%20Ch%C3%ADa%2C%20Cundinamarca!5e0!3m2!1ses!2sco!4v1589833988820!5m2!1ses!2sco" 
+						width="100%" height="417" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+			<div id="directorio">
+				<div class="directorio-info">
+					<h2>Gerente General</h2>
+					<p>Bogotá Colombia</p>
+					<p>martin@learningf.com</p>
+					<p>www.learningfactory.com</p>
+				</div>
+				<div class="directorio-info">
+					<h2>Gerente General</h2>
+					<p>Bogotá Colombia</p>
+					<p>martin@learningf.com</p>
+					<p>www.learningfactory.com</p>
+				</div>
+				<div class="directorio-info">
+					<h2>Gerente General</h2>
+					<p>Bogotá Colombia</p>
+					<p>martin@learningf.com</p>
+					<p>www.learningfactory.com</p>
+
+					<!--<div id="back-directorio">
+<img src="Images/Background.png" alt="fondo-directorio">
+</div>
+-->    
+				</div>
+			</div>
+		</div>
+		<!-- FIN WRAPUBICACION -->
+		<h3 id="titulo-alianza">Alianzas</h3>   
+		<!-- ALIANZAS -->
+		<div id="alianzas">
+
+			<div class="boxalianzas">
+				<img src="Images/Recurso1.png" alt="Microsoft">
+			</div>
+
+			<div class="boxalianzas">
+				<img src="Images/Recurso2.png" alt="Genexus">
+			</div>
+
+			<div class="boxalianzas">
+				<img src="Images/Recurso3.png" alt="Logyca">
+			</div>
+
+			<div class="boxalianzas">
+				<img src="Images/Recurso4.png" alt="Mimio">
+			</div>
+
+			<div class="boxalianzas">
+				<img src="Images/Recurso5.png" alt="Cubix">
+			</div>
+
+			<div class="boxalianzas">
+				<img src="Images/Recurso6.png" alt="itp">
+			</div>
+		</div>
+		<!-- FIN ALIANZAS -->
+
+
+		<!-- FOOTER -->
+		<footer>
+			<div id="wrapFooter">
+				<h3 id="logoFooter">
+					<img src="Images/logoFooter.png" alt="logo footer">
+				</h3>
+
+				<ul id="info-footer">
+					<li id="info-upware">
+						<span>
+							© Upware Soft
+						</span>
+						<p>Calle 1 No.5 - 25 La Balsa, Chía(Cundinamarca) - Colombia</p>
+						<p>Telefonos: 00571 8614387 / 8614367</p>
+					</li>
+					<li id="enlaces">
+						<p>Mapa Del Sitio</p>
+						<p>Trabaja con Nosotros</p>
+						<p>Terminos de Uso</p>
+						<p>Marcas Comerciales</p>
+						<p>Privacidad</p>
+					</li>
+				</ul>
+
+			</div>
+		</footer>
+		<!-- FIN FOOTER -->
+
+
+
+	</body>
+</html>
